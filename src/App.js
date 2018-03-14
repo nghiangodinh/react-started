@@ -5,8 +5,10 @@ import Button from "./components/button";
 import Result from "./components/result";
 import CardList from "./components/cardlist";
 import FindUserForm from "./components/finduserform";
+import Game from "./components/games/game";
 
 class App extends Component {
+  /*
   state = {
     counter: 0,
     cards: [
@@ -40,10 +42,7 @@ class App extends Component {
     }));
   };
 
-  render() {
-    return (
-      <div className="App">
-        <Button incrementValue={1} onClickFunction={this.incrementCounter} />
+    <Button incrementValue={1} onClickFunction={this.incrementCounter} />
         <Button incrementValue={5} onClickFunction={this.incrementCounter} />
         <Button incrementValue={10} onClickFunction={this.incrementCounter} />
         <Button incrementValue={100} onClickFunction={this.incrementCounter} />
@@ -53,6 +52,11 @@ class App extends Component {
         <hr />
         <FindUserForm onSubmit={this.addNewCard} />
         <CardList cards={this.state.cards} />
+  */
+  render() {
+    return (
+      <div className="App">
+        <Game />
       </div>
     );
   }
