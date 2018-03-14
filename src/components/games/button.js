@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-const Button = () => {
-    return (
-        <div className="col-2">
-            <button>=</button>
-        </div>
-    );
-}
+const Button = (props) => {
+  return (
+    <div className="col-2">
+      <button className="btn" disabled={props.selectedNumbers === 0}>=</button>
+    </div>
+  );
+};
 
 export default Button;

@@ -1,15 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import * as _ from "lodash";
 
-const Numbers = () => {
-    return (
-        <div className="card text-center">
-            <div>
-                <span >1</span>
-                <span className="selected">2</span>
-                <span className="used">3</span>
-            </div>
-        </div>
-    );
-}
+const Numbers = props => {
+  const numberClassName = number => {
+    if (props.selectedNumbers.indexOf(number) >= 0) {
+      return "selected";
+    }
+  };
+
+  return (
+    <div className="card text-center">
+      <div>
+        {Numbers.list.map((number, i) => (
+          <span
+            key={i}
+            className={numberClassName(number)}
+            onClick={() => props.selectNumber(number)}
+          >
+            {number}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+Numbers.list = _.range(1, 10);
 
 export default Numbers;
